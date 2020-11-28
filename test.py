@@ -17,4 +17,4 @@ data = [Present_Price, Kms_Driven, Owner, age, Fuel_Type_Diesel,
        Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]
 
 result = model.predict([data])
-print(result)
+print(result[0])

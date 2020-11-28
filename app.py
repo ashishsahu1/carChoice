@@ -2,9 +2,6 @@ from flask import Flask, render_template, request
 from flask import jsonify
 import pickle
 
-modelUrl = open('random_forest_regression_model.pkl', 'rb')
-model = pickle.load(modelUrl)
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -16,6 +13,8 @@ data =[]
 @app.route('/predict', methods =["POST","GET"])
 def predict():    
     if request.method == 'POST':
+        modelUrl = open('random_forest_regression_model.pkl', 'rb')
+        model = pickle.load(modelUrl)
         name = str(request.form['name'])
         marketprice = float(request.form["marketPrice"])
         distance = int(request.form["distance"])
@@ -24,22 +23,34 @@ def predict():
         fuel = str(request.form["fuel"])
         trans = str(request.form["trans"])
         seller = str(request.form["seller"])
-
+        fp = 0
+        fd = 0
         if trans=='auto':
             trans = 0
         else:
             trans = 1
 
         if seller=='dealer':
-            transm = 0
+            seller = 0
         else:
-            transm = 1
+            seller = 1
+        
+        if fuel == 'Petrol':
+            fp=1
+        elif fuel == 'Diesel':
+            fd=1
+        else:
+            fp=0
+            fd=0
 
-        data=[[marketprice, distance, owner, age,]]
 
-        return render_template('index.html', n=name, m =marketprice,
-                            d = distance, a =age, o = owner, f=fuel, t=trans,
-                            s=seller)
+        data=[[marketprice, distance, owner, age,fd,fp,seller,trans]]
+        result = model.predict(data)
+        x = round(result[0],2)
+
+        final = str(name)+", this car would cost you around Rs "+str(x)+" Lakhs"
+
+        return render_template('index.html', f=final)
     return 'something went wrong'
 
 
