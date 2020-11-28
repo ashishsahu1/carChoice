@@ -2,7 +2,7 @@ import pickle
 
 modelUrl = open('random_forest_regression_model.pkl', 'rb')
 model = pickle.load(modelUrl)
-Present_Price = 50.00
+Present_Price = 10.00
 Kms_Driven = 24000
 Owner = 1
 age = 2
@@ -13,5 +13,5 @@ Transmission_Manual = 1
 data = [Present_Price, Kms_Driven, Owner, age, Fuel_Type_Diesel,
        Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]
 
-x = model.predict([data])
-print(x)
+result = model.predict([data])
+print(result)
