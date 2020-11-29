@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Car Choice</title>
 </head>
 <body>
@@ -58,9 +59,7 @@
 
    <button action="" id= "pred" type="submit">PREDICT</button>
 
-   <h3>{{ f }}</h3>
-
-
+   <p>{{ f }}</p>
    </form>
 </body>
 </html>

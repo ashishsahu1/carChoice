@@ -48,6 +48,9 @@ def predict():
         result = model.predict(data)
         x = round(result[0],2)
 
+        if x<0:
+            final = "Sorry to say "+str(name)+", you can not buy this car 🙁 "
+
         final = str(name)+", this car would cost you around Rs "+str(x)+" Lakhs"
 
         return render_template('index.html', f=final)
