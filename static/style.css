@@ -1,4 +1,5 @@
 body{
+    padding: 0%;
     background: #090F1B;  
     font-family : sans-serif;
     align-items: center;
@@ -14,17 +15,88 @@ body{
 .complete{
     display: grid;
     grid-template-areas: "right left";
-    max-width: 900px;
+    max-width: 1800px;
 }
 
-h1{
-    background-color: rgb(199, 199, 199);
+.right-box{
+    background: #0F203C;
+    overflow: hidden;
+    margin: 10%;
+    padding: 40px 0 0 0 ;
+    position: relative;
+    text-align: center;
+    width: 700px;
 }
 
-.line label{
+.left-box{
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+}
+
+.left-box p{
+    font-size: 30;
+}
+
+.left-box .set{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.left-box .line input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #737A8A;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #56657A;
+    outline: none;
+    background: transparent;
+}
+
+.left-box .line input:focus ~ span {
+    display:none;
+  }
+
+  span {
+    position:absolute;
+    top:3px;
+    left:3px;
+}
+
+.left-box .set .line label{
+    position: absolute;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #56657A;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.left-box{
     
 }
 
-.line input{
-    background-color: #56657A;
+/* 
+.left-box .line input:focus ~ label,
+.left-box .line input:valid ~ label{
+    left: 0;
+    color: #0078D7;
+    font-size: 12px;
+} */
+
+.left-box button{
+    background-color: #D93665;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition-duration: 0.2ms;
+}
+.left-box button:hover{
+   background-color:#da5279 ;
 }

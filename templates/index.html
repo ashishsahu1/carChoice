@@ -10,31 +10,39 @@
      
 
 <div class="left-box">
+
+<p>💙 Hey, can you provide some details..</p>
+
    <form action="{{ url_for('predict')}}" method="post">
     
+<div class="set">
    <div class="line">
-    <input id="form1" name="name" type="text" >
-    <label>NAME</label>
+    <label>NAME</label><input id="form1" name="name" type="text" >
+    
    </div>
 
    <div class="line">
-    <input id= "form1" name="marketPrice" type="text"> 
-    <label>MARKET PRICE</label>
+     <label>MARKET PRICE</label><input id= "form1" name="marketPrice" type="text"> 
+   
+   </div>
+</div>
+
+<div class="set">
+   <div class="line">
+    <label>DISTANCE</label><input id= "form1" name="distance" type="text"> 
+    
    </div>
 
    <div class="line">
-    <input id= "form1" name="distance" type="text"> 
-    <label>DISTANCE</label>
+    <label>AGE</label><input id= "form1" name="age" type="text">
+    
    </div>
+</div>
 
-   <div class="line">
-    <input id= "form1" name="age" type="text">
-    <label>AGE</label>
-   </div>
-
+<div class="set">
      <div class="line">
-    <input id= "form1" name="lastOwner" type="text">
-    <label>NO OF LAST OWNERS</label>
+    <label>NO OF LAST OWNERS</label><input id= "form1" name="lastOwner" type="text">
+    
    </div>
 
    <div class="radio">
@@ -45,7 +53,9 @@
         <input name="fuel" id="CNG" type="radio" value="CNG">
         <label for="CNG">CNG</label> 
    </div>
+</div>
 
+<div class="set">
    <div class="radio">
         <input name="trans" id="Auto" type="radio" value="auto">
         <label for="Auto">AUTO</label>
@@ -59,6 +69,7 @@
         <input name="seller" id="Owner" type="radio" value="owner">
         <label for="Owner">OWNER</label>
    </div>
+</div>
 
    <button action="" id= "pred" type="submit">PREDICT</button>
 
@@ -70,7 +81,7 @@
           <h1>Right container</h1>
      </div>
 
-     
+
 </div>
 
 </body>
