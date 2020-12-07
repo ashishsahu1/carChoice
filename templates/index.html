@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>Car Choice</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+     <title>Car Choice</title>
 </head>
 <body>
+<div class="complete">
+     
+
+<div class="left-box">
    <form action="{{ url_for('predict')}}" method="post">
     
    <div class="line">
@@ -29,7 +32,7 @@
     <label>AGE</label>
    </div>
 
-    <div class="line">
+     <div class="line">
     <input id= "form1" name="lastOwner" type="text">
     <label>NO OF LAST OWNERS</label>
    </div>
@@ -61,5 +64,14 @@
 
    <p>{{ f }}</p>
    </form>
+   </div>
+
+   <div class="right-box">
+          <h1>Right container</h1>
+     </div>
+
+     
+</div>
+
 </body>
 </html>

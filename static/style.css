@@ -1,0 +1,30 @@
+body{
+    background: #090F1B;  
+    font-family : sans-serif;
+    align-items: center;
+    color: #737A8A;
+    display: grid;
+    font-size: 20;
+    font-weight: 400;
+    height: 100vh;
+    justify-items: center;
+    width:100vw;
+}
+
+.complete{
+    display: grid;
+    grid-template-areas: "right left";
+    max-width: 900px;
+}
+
+h1{
+    background-color: rgb(199, 199, 199);
+}
+
+.line label{
+    
+}
+
+.line input{
+    background-color: #56657A;
+}
