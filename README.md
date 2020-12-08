@@ -36,9 +36,12 @@ The model used is tree based regression model RandomForestRegressor.
 <br>
 
 # 📌 Deployed webapp 
-<br>
-
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://usedcar-pred.herokuapp.com/)
+- Deployed Server : Heroku
+- Web-app : [LIVE](https://usedcar-pred.herokuapp.com/)
 
 # 📌 ScreenClips
+
+![](static\img\ss.gif)
+
+<p align="center"; font-size:400px;>THANK YOU</p>
 
