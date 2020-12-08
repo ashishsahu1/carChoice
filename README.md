@@ -41,7 +41,7 @@ The model used is tree based regression model RandomForestRegressor.
 
 # 📌 ScreenClips
 
-![](static/img/ss.gif)
+![](static/img/ss1.gif)
 
 <p align="center"; font-size:400px;>THANK YOU</p>
 
