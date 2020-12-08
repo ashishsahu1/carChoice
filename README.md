@@ -1,4 +1,4 @@
-![](static\img\banner.png)
+![](static/img/banner.png)
 # 📌 About
 
 Car-Choice is a used car price prediction web app. This web app takes inputs like distance traveled, age, current market price from the user and then predict the estimated selling price.
