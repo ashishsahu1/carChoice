@@ -43,5 +43,5 @@ The model used is tree based regression model RandomForestRegressor.
 
 ![](static/img/ss1.gif)
 
-<p align="center"; font-size:400px;>THANK YOU</p>
+<p align="center"; font-size:400px;>💙 THANK YOU 💙</p>
 
